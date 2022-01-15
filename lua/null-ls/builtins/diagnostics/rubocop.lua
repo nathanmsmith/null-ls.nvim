@@ -46,6 +46,7 @@ return h.make_builtin({
         command = "rubocop",
         args = { "-f", "json", "--stdin", "$FILENAME" },
         to_stdin = true,
+        ignore_stderr = true,
         format = "json",
         check_exit_code = function(code)
             return code <= 1
